@@ -128,6 +128,13 @@
                     "type": "string",
                     "enum": ["pwm", "software", "timer", "custom"]
                 },
+                "default": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "brightness": {"$ref": "qmk.definitions.v1#/unsigned_int_8"}
+                    }
+                },
                 "breathing": {"type": "boolean"},
                 "breathing_period": {"$ref": "qmk.definitions.v1#/unsigned_int_8"},
                 "levels": {
@@ -373,6 +380,15 @@
                         "type": "boolean"
                     }
                 },
+                "default": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "animation": {"type": "string"},
+                        "val": {"$ref": "qmk.definitions.v1#/unsigned_int_8"},
+                        "speed": {"$ref": "qmk.definitions.v1#/unsigned_int_8"}
+                    }
+                },
                 "driver": {"type": "string"},
                 "center_point": {
                     "type": "array",
@@ -422,6 +438,17 @@
                     "type": "object",
                     "additionalProperties": {
                         "type": "boolean"
+                    }
+                },
+                "default": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "animation": {"type": "string"},
+                        "hue": {"$ref": "qmk.definitions.v1#/unsigned_int_8"},
+                        "sat": {"$ref": "qmk.definitions.v1#/unsigned_int_8"},
+                        "val": {"$ref": "qmk.definitions.v1#/unsigned_int_8"},
+                        "speed": {"$ref": "qmk.definitions.v1#/unsigned_int_8"}
                     }
                 },
                 "driver": {"type": "string"},
@@ -477,6 +504,17 @@
                     }
                 },
                 "brightness_steps": {"$ref": "qmk.definitions.v1#/unsigned_int"},
+                "default": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "animation": {"type": "string"},
+                        "hue": {"$ref": "qmk.definitions.v1#/unsigned_int_8"},
+                        "sat": {"$ref": "qmk.definitions.v1#/unsigned_int_8"},
+                        "val": {"$ref": "qmk.definitions.v1#/unsigned_int_8"},
+                        "speed": {"$ref": "qmk.definitions.v1#/unsigned_int_8"}
+                    }
+                },
                 "driver": {
                     "type": "string",
                     "enum": ["apa102", "custom", "ws2812"]
